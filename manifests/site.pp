@@ -48,7 +48,7 @@ node default {
     owner => 'root',
     group => 'root',
     mode => '0644',
-    content => 'Puppet Virtual Fundamentals 7.1',
+    content => 'Puppet Virtual Fundamentals 7.1\n',
     }
     
  
