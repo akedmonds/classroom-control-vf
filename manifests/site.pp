@@ -43,8 +43,9 @@ node default {
   # Example:
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
-  exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
-    path => '/usr/local/bin',
-    creates => '/etc/motd',
- }
+  host { 'testing.puppetlabs.vm':
+    ensure => present.
+    ip => '127.0.0.1',
+    }
+    
 }
