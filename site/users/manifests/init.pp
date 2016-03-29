@@ -1,7 +1,7 @@
 class users { 
   user { 'fundamentals':
     ensure => present,
-    shell => '/bin/nologin',
+    shell => '/bin/bash',
   }
 }
     
