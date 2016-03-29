@@ -44,7 +44,7 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
   host { 'testing.puppetlabs.vm':
-    ensure => present.
+    ensure => present,
     ip => '127.0.0.1',
     }
     
