@@ -36,10 +36,7 @@ class nginx {
   file {[$docroot,"${confdir}/conf.d":
     ensure => directory,
       }
-  file {"${docroot}/index.html":
-    ensure => file,
-    source => 'puppet:///modules/nginx/index.html', 
-    }
+  
   file {"${confdir}/nginx.conf":
     ensure => file,
     content => template('nginx/nginx.conf.erb'),
