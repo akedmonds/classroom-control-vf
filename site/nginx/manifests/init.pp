@@ -1,6 +1,6 @@
 class nginx {
   case $::osfamily {
-    'redhat','debian' : {
+    'RedHat','debian' : {
       $package = 'nginx'
       $owner = 'root'
       $group = 'root'
@@ -22,7 +22,7 @@ class nginx {
   }
 # user the service will run as. Used in the nginx.conf.erb template
   $user = $::osfamily ? {
-    'redhat' => 'nginx',
+    'RedHat' => 'nginx',
     'debian' => 'www-data',
     'windows' => 'nobody',
     }
