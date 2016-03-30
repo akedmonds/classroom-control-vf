@@ -32,7 +32,6 @@ class nginx {
   File {
     owner => $owner,
     group => $group,
-    mode => '0664',
   }
   file {[$docroot,"${confdir}/conf.d":
     ensure => directory,
